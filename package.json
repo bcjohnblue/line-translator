@@ -1,0 +1,22 @@
+{
+  "name": "line-translator",
+  "version": "1.0.0",
+  "description": "LINE group translation bot (Chinese <-> Indonesian/English) powered by Gemini Flash",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "test:translate": "node --env-file=.env scripts/test-translate.js",
+    "deploy": "./deploy.sh"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.29.2",
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "@line/bot-sdk": "^9.0.0",
+    "express": "^4.21.0"
+  }
+}
